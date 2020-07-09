@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short url</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Short Url for your code garden</h1>
+    </header>
+    <main id="app">
+        <form @submit.prevent="createUrl()">
+            <label for="url"> Url</label>
+            <input name="url" v-model="url" id="url">
+            <label for="alias"> Alias</label>
+            <input name="alias" v-model="alias" id="alias">
+            <button type="submit">Create</button>
+        </form>
+        <!-- <pre>
+            {{JSON.stringify(created,null,2)}}
+        </pre> -->
+    </main>
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
